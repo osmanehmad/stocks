@@ -1,0 +1,31 @@
+<head>
+  <title>stocks</title>
+</head>
+
+<body>
+  {{> stats}}
+  {{> new_stock}}
+</body>
+
+<template name="stats">
+<table class='table'>
+  {{#each stocks}}
+<tr>
+  <td>
+    {{type}}
+  </td>
+  <td>
+    {{price}}
+  </td>
+</tr>
+  {{/each}}
+</table>
+</template>
+
+<template name="new_stock">
+  <div class="form">
+    <input type="text" name="" id="type" value="" />
+    <input type="text" name="" id="price" value="" />
+    <button class='submit'>Submit</button>
+  </div>
+</template>
