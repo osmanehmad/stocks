@@ -9,7 +9,11 @@
 </body>
 
 <template name="stats">
-<table class='table'>
+<table border ="1px" class='table table-bordered table-hover' align='center' style="width: 50%">
+  <thead>
+    <th>Commodity Type</th>
+    <th>Price</th>
+  </thead>
   {{#each stocks}}
 <tr>
   <td>
@@ -24,12 +28,12 @@
 </template>
 
 <template name="new_stock">
-  <div class="form">
+  <div class="form" align='center'>
     Commodity Name : <input type="text" name="" id="type" value="" />
     <br />
     Commodity Price : <input type="text" name="" id="price" value="" />
     <br />
-    <button class='submit'>Submit</button>
+    <button class='submit btn btn-primary'>Submit</button>
   </div>
 </template>
 
@@ -38,4 +42,5 @@
   {{lines}}
 </div>
 </template>
+
 

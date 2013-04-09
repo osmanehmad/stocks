@@ -14,8 +14,7 @@ Template.stats.events({
   });
 
 
-
-  Template.trends.lines = function () {
+  function setup_d3(){
     var data = [3, 6, 2, 7, 5, 2, 1, 3, 8, 9, 2, 5, 7],
     w = 400,
     h = 200,
@@ -23,9 +22,11 @@ Template.stats.events({
     y = d3.scale.linear().domain([0, d3.max(data)]).range([0 + margin, h - margin]),
     x = d3.scale.linear().domain([0, data.length]).range([0 + margin, w - margin])
     var vis = d3.select("body")
+
     .append("svg:svg")
     .attr("width", w)
     .attr("height", h)
+    .attr("align", 'center')
     var g = vis.append("svg:g")
     .attr("transform", "translate(0, 200)");
     var line = d3.svg.line()
@@ -75,6 +76,11 @@ Template.stats.events({
     .attr("x1", x(-0.3))
     .attr("y2", function(d) { return -1 * y(d); })
     .attr("x2", x(0))
+
+  }
+
+  Template.trends.lines = function () {
+    setup_d3();
   };
 
   Template.new_stock.events({
