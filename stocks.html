@@ -5,6 +5,7 @@
 <body>
   {{> stats}}
   {{> new_stock}}
+  {{> trends}}
 </body>
 
 <template name="stats">
@@ -29,3 +30,10 @@
     <button class='submit'>Submit</button>
   </div>
 </template>
+
+<template name="trends">
+<div id='lines'>
+  {{lines}}
+</div>
+</template>
+

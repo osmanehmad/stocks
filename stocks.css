@@ -1,4 +1,5 @@
 /* CSS declarations go here */
+
 @import url(//fonts.googleapis.com/css?family=Telex);
 
 /*!
@@ -2013,9 +2014,9 @@ table {
 .table td {
   padding: 8px;
   line-height: 20px;
-  text-align: left;
-  vertical-align: top;
+  vertical-align: center;
   border-top: 1px solid #dddddd;
+  text-align: center;
 }
 
 .table th {
@@ -2051,3 +2052,19 @@ table {
 .table-bordered {
   border: 1px solid #dddddd;
   border-collapse: separate;
+}
+
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+ 
+line {
+    stroke: black;
+}
+ 
+text {
+    font-family: Arial;
+    font-size: 9pt;
+}
