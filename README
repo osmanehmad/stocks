@@ -1,0 +1,23 @@
+simple meteorjs app - updates stock values in real time as fed by any user on any client
+
+what's in it?
+
+1. creating mongo collection
+2. user controls and underlying Meteor code for adding document in the mongo db collection
+3. using Meteor.call to call the method which inserts document in mongodb collection, hence, no client side database insertion code
+4. uses twitter bootstrap - in css file
+5. uses d3js added as meteor package
+6. a stub d3js line chart with test data 
+7. jquery is also added meteor package
+
+#TODO
+
+1. convert prices to float
+2. pull prices averages in table
+3. make drop down for selecting commodity type
+4. ...
+
+Deployed at:
+http://qwexar.com:3000/
+
+realtime web applications are eventually going to power a lot of businesses
