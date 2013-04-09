@@ -81,7 +81,11 @@ Template.stats.events({
     'click .submit' : function(){
       var type = document.getElementById("type").value;
       var price = document.getElementById("price").value;
-      if (type.length !== 0 && type.length !==0){stocks.insert({'type':type,'price':price});}
+      if (type.length !== 0 && type.length !==0){
+        // http://docs.meteor.com/#meteor_call
+        // doing Meteor.call instead of calling Collection.insert on the client side
+        Meteor.call('insert',({'type':type,'price':price}));
+      }
       else{alert("can't take empty values");}
     }
   });
